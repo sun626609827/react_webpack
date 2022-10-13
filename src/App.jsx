@@ -1,11 +1,15 @@
-import React from 'react';
-import './App.less';
- 
- const App=()=>{
-    return(
-      <div>
-        <a href="">构建react</a>
+import React, { useCallback, useEffect, useState } from "react";
+import "./App.less";
+import { useNavigate } from "react-router-dom";
+import Router from "./router";
+const App = () => {
+  React.$navigate = useNavigate();
+  return (
+    <div className="App">
+      <div className="content">
+        <Router />
       </div>
-    )
-}
-export default App
+    </div>
+  );
+};
+export default App;
